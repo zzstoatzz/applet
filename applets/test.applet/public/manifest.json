@@ -1,0 +1,77 @@
+{
+  "type": "applet",
+  "name": "Todo Applet",
+  "description": "A simple todo list manager",
+  "entrypoint": "index.html",
+  "actions": [
+    {
+      "id": "add_todo",
+      "description": "Adds a new todo item to the list",
+      "params": {
+        "text": {
+          "type": "string",
+          "description": "The text of the todo item"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority level (low, medium, high)",
+          "optional": true
+        }
+      }
+    },
+    {
+      "id": "toggle_todo",
+      "description": "Toggles the completion status of a todo item",
+      "params": {
+        "id": {
+          "type": "string",
+          "description": "The ID of the todo item to toggle"
+        }
+      }
+    },
+    {
+      "id": "remove_todo",
+      "description": "Removes a todo item from the list",
+      "params": {
+        "id": {
+          "type": "string",
+          "description": "The ID of the todo item to remove"
+        }
+      }
+    },
+    {
+      "id": "set_filter",
+      "description": "Sets the current filter for todos",
+      "params": {
+        "filter": {
+          "type": "string",
+          "description": "Filter type (all, active, completed)"
+        }
+      }
+    },
+    {
+      "id": "set_sort",
+      "description": "Sets the current sort method",
+      "params": {
+        "sortBy": {
+          "type": "string",
+          "description": "Sort method (priority, date, text)"
+        }
+      }
+    },
+    {
+      "id": "set_priority",
+      "description": "Sets the priority of a todo item",
+      "params": {
+        "id": {
+          "type": "string",
+          "description": "The ID of the todo item"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority level (low, medium, high)"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Applet</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <style>
+      * {
+        font-family: 'Fira Code', monospace;
+      }
+
+      body {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f7f7f7;
+      }
+
+      .controls {
+        position: sticky;
+        top: 0;
+        background: #f7f7f7;
+        padding: 16px 0;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 12px;
+        border-bottom: 2px solid #eee;
+      }
+
+      select {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        background: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      select:hover {
+        border-color: #999;
+      }
+
+      .todo-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        font-size: 16px;
+      }
+
+      .todo-item input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .todo-item span {
+        flex: 1;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .todo-item button {
+        margin-left: auto;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #ff4444;
+        font-size: 24px;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+
+      .todo-item button:hover {
+        background: #ffebee;
+      }
+
+      .priority-high { 
+        border-left: 4px solid #f44336;
+      }
+
+      .priority-medium { 
+        border-left: 4px solid #ff9800;
+      }
+
+      .priority-low { 
+        border-left: 4px solid #4caf50;
+      }
+
+      .todo-item select {
+        padding: 4px 8px;
+        font-size: 14px;
+      }
+
+      /* Priority-specific text colors */
+      .priority-high select { 
+        border-color: #f44336;
+        color: #f44336;
+      }
+
+      .priority-medium select {
+        border-color: #ff9800;
+        color: #ff9800;
+      }
+
+      .priority-low select {
+        border-color: #4caf50;
+        color: #4caf50;
+      }
+
+      /* Completed todo styling */
+      .todo-item.completed {
+        opacity: 0.7;
+      }
+
+      .todo-item.completed span {
+        text-decoration: line-through;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

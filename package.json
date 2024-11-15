@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@web-applets/cli": "^0.0.17"
+  }
+}
